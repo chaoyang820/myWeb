@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI应用全景</title>
+    <!-- 引入Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 引入Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/myWeb/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <h1>AI应用全景</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="搜索功能...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div id="loginStatus" class="logged-in-status" style="display: none;">已登录</div>
+            <button class="login-button" id="loginButton">登录</button>
+            <button class="logout-button" id="logoutButton" style="display: none;">注销</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="app-grid">
+            <h2 class="section-title">常用工具</h2>
+            <div class="grid-container">
+                <a href="/chat" class="app-card">
+                    <div class="icon-container">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>AI对话</h3>
+                    <p>智能对话助手，为您解答各类问题</p>
+                </a>
+                <a href="/image" class="app-card">
+                    <div class="icon-container">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>图像生成</h3>
+                    <p>AI绘画与图像编辑工具</p>
+                </a>
+                <a href="/code" class="app-card">
+                    <div class="icon-container">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>代码助手</h3>
+                    <p>智能编程辅助与代码生成</p>
+                </a>
+                <a href="/write" class="app-card">
+                    <div class="icon-container">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>文案创作</h3>
+                    <p>智能写作与内容生成工具</p>
+                </a>
+            </div>
+
+            <h2 class="section-title">高级功能</h2>
+            <div class="grid-container">
+                <a href="/voice" class="app-card">
+                    <div class="icon-container">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>语音助手</h3>
+                    <p>语音识别与合成服务</p>
+                </a>
+                <a href="/translate" class="app-card">
+                    <div class="icon-container">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>智能翻译</h3>
+                    <p>多语言翻译与本地化服务</p>
+                </a>
+                <a href="/data" class="app-card">
+                    <div class="icon-container">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>数据分析</h3>
+                    <p>智能数据处理与可视化</p>
+                </a>
+                <a href="/video" class="app-card">
+                    <div class="icon-container">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>视频处理</h3>
+                    <p>AI视频编辑与生成工具</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="copyright">
+                <p>© 2024 AI应用全景. 保留所有权利</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-weixin"></i></a>
+                <a href="#"><i class="fab fa-weibo"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 登录弹出框 -->
+    <div class="login-modal" id="loginModal">
+        <div class="login-container">
+            <h2 class="login-title">请输入API Key</h2>
+            <input type="text" id="apiKeyInput" class="login-input" placeholder="API Key">
+            <div class="login-buttons">
+                <button class="login-button" id="loginSubmit">确定</button>
+                <button class="login-button" id="loginCancel">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/myWeb/script.js"></script>
+</body>
+</html>
