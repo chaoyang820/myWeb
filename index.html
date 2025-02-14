@@ -21,38 +21,58 @@
                 <input type="text" placeholder="搜索功能...">
                 <i class="fas fa-search"></i>
             </div>
-            <div id="loginStatus" class="logged-in-status" style="display: none;">已登录</div>
-            <button class="login-button" id="loginButton">登录</button>
-            <button class="logout-button" id="logoutButton" style="display: none;">注销</button>
+            <div class="auth-container">
+                <div id="loginStatus" class="logged-in-status" style="display: none;">已登录</div>
+                <button class="login-button" id="loginButton">登录</button>
+                <button class="logout-button" id="logoutButton" style="display: none;">注销</button>
+            </div>
         </div>
     </header>
 
     <main>
         <section class="app-grid">
+
+            <h2 class="section-title">信息抽取</h2>
+            <div class="grid-container">
+                <a href="/tags" class="app-card" id="product-recognition">
+                    <div class="icon-container">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>产品型号识别</h3>
+                    <p title="根据提供的商品信息提取产品的型号">根据提供的商品信息提取产品的型号</p>
+                </a>
+                <a href="/tags" class="app-card" id="store-info">
+                    <div class="icon-container">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>店铺地址信息抽取</h3>
+                    <p title="根据提供的店铺地址信息，提取其中的渠道名称、店铺类型、主营品类、专卖品牌">根据提供的店铺地址信息，提取其中的渠道名称、店铺类型、主营品类、专卖品牌</p>
+                </a>
+            </div>
             <h2 class="section-title">常用工具</h2>
             <div class="grid-container">
-                <a href="/chat" class="app-card">
+                <a href="/chat" class="app-card" id="chat">
                     <div class="icon-container">
                         <i class="fas fa-comments"></i>
                     </div>
                     <h3>AI对话</h3>
                     <p>智能对话助手，为您解答各类问题</p>
                 </a>
-                <a href="/image" class="app-card">
+                <a href="/image" class="app-card" id="app_image">
                     <div class="icon-container">
                         <i class="fas fa-image"></i>
                     </div>
                     <h3>图像生成</h3>
                     <p>AI绘画与图像编辑工具</p>
                 </a>
-                <a href="/code" class="app-card">
+                <a href="/code" class="app-card" id="code">
                     <div class="icon-container">
                         <i class="fas fa-code"></i>
                     </div>
                     <h3>代码助手</h3>
                     <p>智能编程辅助与代码生成</p>
                 </a>
-                <a href="/write" class="app-card">
+                <a href="/write" class="app-card" id="write">
                     <div class="icon-container">
                         <i class="fas fa-pen-fancy"></i>
                     </div>
@@ -63,28 +83,28 @@
 
             <h2 class="section-title">高级功能</h2>
             <div class="grid-container">
-                <a href="/voice" class="app-card">
+                <a href="/voice" class="app-card" id="voice">
                     <div class="icon-container">
                         <i class="fas fa-microphone"></i>
                     </div>
                     <h3>语音助手</h3>
                     <p>语音识别与合成服务</p>
                 </a>
-                <a href="/translate" class="app-card">
+                <a href="/translate" class="app-card" id="translate">
                     <div class="icon-container">
                         <i class="fas fa-language"></i>
                     </div>
                     <h3>智能翻译</h3>
                     <p>多语言翻译与本地化服务</p>
                 </a>
-                <a href="/data" class="app-card">
+                <a href="/data" class="app-card" id="app_data">
                     <div class="icon-container">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <h3>数据分析</h3>
                     <p>智能数据处理与可视化</p>
                 </a>
-                <a href="/video" class="app-card">
+                <a href="/video" class="app-card" id="app_video">
                     <div class="icon-container">
                         <i class="fas fa-video"></i>
                     </div>

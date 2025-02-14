@@ -34,12 +34,14 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 300px auto;
     align-items: center;
+    gap: 1rem;
 }
 
 .logo {
+    justify-self: start;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -56,8 +58,9 @@ header {
 }
 
 .search-container {
-    position: relative;
+    justify-self: center;
     width: 300px;
+    position: relative;
 }
 
 .search-container input {
@@ -76,6 +79,14 @@ header {
     color: var(--text-secondary);
 }
 
+/* 登录状态和按钮容器 */
+.auth-container {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 /* 主要内容区域 */
 main {
     max-width: 1200px;
@@ -91,9 +102,10 @@ main {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 270px);
     gap: 1.5rem;
     margin-bottom: 2rem;
+    justify-content: start;
 }
 
 .app-card {
@@ -104,6 +116,9 @@ main {
     color: var(--text-primary);
     transition: transform 0.2s, box-shadow 0.2s;
     border: 1px solid var(--border-color);
+    width: 270px;
+    overflow: hidden;
+    position: relative;
 }
 
 .app-card:hover {
@@ -135,6 +150,45 @@ main {
 .app-card p {
     color: var(--text-secondary);
     font-size: 0.875rem;
+    height: 1.2em; /* 修改为1行高度 */
+    line-height: 1.2em;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* 修改为限制显示1行 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    position: relative;
+}
+
+.app-card:hover p::after {
+    content: attr(data-full-text);
+    position: absolute;
+    left: calc(100% + 10px); /* 在卡片右侧显示 */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    white-space: normal;
+    width: max-content;
+    max-width: 300px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 添加一个小箭头 */
+.app-card:hover p::before {
+    content: '';
+    position: absolute;
+    left: calc(100% + 5px);
+    top: 50%;
+    transform: translateY(-50%);
+    border: 5px solid transparent;
+    border-right-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
 }
 
 /* 页脚样式 */
@@ -467,4 +521,46 @@ footer {
     0% { opacity: 0.6; }
     50% { opacity: 1; }
     100% { opacity: 0.6; }
+}
+
+/* 提示输入样式 */
+.prompt-suggestions {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: #f8fafc;
+}
+
+.prompt-chip {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.prompt-chip:hover::before {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    white-space: normal;
+    max-width: 300px;
+    z-index: 1000;
+    margin-bottom: 0.5rem;
 } 
