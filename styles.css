@@ -563,4 +563,50 @@ footer {
     max-width: 300px;
     z-index: 1000;
     margin-bottom: 0.5rem;
+}
+
+/* 添加文件上传按钮的样式 */
+#fileInput {
+    display: none; /* 隐藏文件输入 */
+}
+
+.upload-button {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.upload-button:hover {
+    color: var(--primary-color);
+}
+
+.file-info {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--background-color);
+    border-radius: 0.25rem;
+}
+
+.message-content.typing::after {
+    content: '_';
+    display: inline-block;
+    animation: cursor-blink 1s infinite;
+}
+
+@keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.send-button:disabled,
+.icon-button:disabled,
+#messageInput:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 } 

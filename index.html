@@ -31,24 +31,45 @@
 
     <main>
         <section class="app-grid">
-
+            <!-- 信息抽取 -->
             <h2 class="section-title">信息抽取</h2>
             <div class="grid-container">
                 <a href="/tags" class="app-card" id="product-recognition">
                     <div class="icon-container">
-                        <i class="fas fa-tags"></i>
+                        <i class="fas fa-barcode"></i>
                     </div>
                     <h3>产品型号识别</h3>
                     <p title="根据提供的商品信息提取产品的型号">根据提供的商品信息提取产品的型号</p>
                 </a>
                 <a href="/tags" class="app-card" id="store-info">
                     <div class="icon-container">
-                        <i class="fas fa-tags"></i>
+                        <i class="fas fa-store"></i>
                     </div>
                     <h3>店铺地址信息抽取</h3>
                     <p title="根据提供的店铺地址信息，提取其中的渠道名称、店铺类型、主营品类、专卖品牌">根据提供的店铺地址信息，提取其中的渠道名称、店铺类型、主营品类、专卖品牌</p>
                 </a>
             </div>
+            
+            <!-- 创作生成 -->
+            <h2 class="section-title">创作生成</h2>
+            <div class="grid-container">
+                <a href="/create_ppt" class="app-card" id="create_ppt">
+                    <div class="icon-container">
+                        <i class="fas fa-file-powerpoint"></i>
+                    </div>
+                    <h3>PPT大纲生成</h3>
+                    <p title="借助大模型，导入文章或输入一个主题自动生成PPT大纲，最终应用于一键生成PPT">借助大模型，导入文章或输入一个主题自动生成PPT大纲，最终应用于一键生成PPT</p>
+                </a>
+                <a href="/create_oral_script" class="app-card" id="create_oral_script">
+                    <div class="icon-container">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>口播脚本生成</h3>
+                    <p title="借助模型来生成口播脚本，让主播在开播前，能够更高效的设计脚本">借助模型来生成口播脚本，让主播在开播前，能够更高效的设计脚本</p>
+                </a>
+            </div>
+
+            <!-- 常用工具 -->
             <h2 class="section-title">常用工具</h2>
             <div class="grid-container">
                 <a href="/chat" class="app-card" id="chat">
@@ -58,12 +79,12 @@
                     <h3>AI对话</h3>
                     <p>智能对话助手，为您解答各类问题</p>
                 </a>
-                <a href="/image" class="app-card" id="app_image">
+                <a href="/doucuments" class="app-card" id="doucuments">
                     <div class="icon-container">
-                        <i class="fas fa-image"></i>
+                        <i class="fas fa-file-alt"></i>
                     </div>
-                    <h3>图像生成</h3>
-                    <p>AI绘画与图像编辑工具</p>
+                    <h3>文档信息抽取</h3>
+                    <p title="抽取文档的信息">抽取文档的信息</p>
                 </a>
                 <a href="/code" class="app-card" id="code">
                     <div class="icon-container">
@@ -80,7 +101,7 @@
                     <p>智能写作与内容生成工具</p>
                 </a>
             </div>
-
+            <!-- 高级功能 -->
             <h2 class="section-title">高级功能</h2>
             <div class="grid-container">
                 <a href="/voice" class="app-card" id="voice">
